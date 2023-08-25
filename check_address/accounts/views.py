@@ -2,6 +2,7 @@ from django.http import Http404
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from accounts.forms import UserRegisterForm
+from address.models import CustomUser
 from django.views import View
 from django.contrib.auth.decorators import login_required
 
@@ -27,6 +28,9 @@ class RegistrationView(View):
             raise Http404
 
 
-@login_required
+# @login_required
 def profile(request):
-    return render(request, 'profile.html')
+    context = {}
+    if request.user.is_authenticated:
+        context['email'] = request.user.email
+    return render(request, 'profile.html', context=context)
