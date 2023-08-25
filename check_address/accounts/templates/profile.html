@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
-    <title>exported project</title>
+    <title>ММТ-ГИС. Профиль</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -34,6 +34,8 @@
       data-tag="font"
     />
     <link rel="stylesheet" href="{% static "css/style.css" %}" />
+    <link type="image/x-icon" href="{% static "png/Logo_MMT.png" %}" rel="shortcut icon">
+    <link type="Image/x-icon" href="{% static "png/Logo_MMT.png" %}" rel="icon">
   </head>
   <body>
     <div>
@@ -81,7 +83,7 @@
                         {% if user.is_authenticated %}
                             <p>{{ user.get_username }}</p>
                         {% else %}
-                            <p>Войдите в аккаунт</p>
+                            <p style="color:#353535;">Войдите в аккаунт</p>
                         {% endif %}
                       </span>
                     </div>
@@ -93,7 +95,7 @@
                         {% if user.is_authenticated %}
                             <p>{{ email }}</p>
                         {% else %}
-                            <p>Войдите в аккаунт</p>
+                            <p style="color:#353535;">Войдите в аккаунт</p>
                         {% endif %}
                       </span>
                     </div>
@@ -102,26 +104,26 @@
                         Модификатор доступа:
                       </span>
                       <span class="-vprofile-text1">
-                        {% if user.is_superuser %}
-                          <p>Администратор</p>
+                        {% if user.is_authenticated %}
+                          {% if user.is_superuser %}
+                            <p>Администратор</p>
+                          {% else %}
+                            <p>Обычный пользователь</p>
+                          {% endif %}
                         {% else %}
-                          <p>Обычный пользователь</p>
-                        {% endif %}
+                            <p style="color:#353535;">Войдите в аккаунт</p>
+                        {% endif %}  
                       </span>
                     </div>
                   </div>
                 </div>
+                <div></div>
                 <br>
                 <img
                   alt="Devider1712"
                   src="{% static "png/devider1712-jbu3-200h.png" %}"
                   class="-vprofile-devider"
                 />
-                {% comment %} <form>
-                  <button type="button" class="-vprofile-button">
-                    Забыли пароль?
-                  </button>
-                </form> {% endcomment %}
                 <div class="-vprofile-frame18">
                   <div class="-vprofile-frame17">
                     <div class="-vprofile-frame41">
@@ -170,16 +172,6 @@
                   />
                 </button>
               </form>
-              {% comment %} <img
-                alt="compassbtn1762"
-                src="public/external/compassbtn1762-l36e.svg"
-                class="-vprofile-compassbtn"
-              />
-              <img
-                alt="githubbtn1765"
-                src="public/external/githubbtn1765-rsa.svg"
-                class="-vprofile-githubbtn"
-              /> {% endcomment %}
             </div>
           </div>
         </div>

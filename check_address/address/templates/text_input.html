@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
-    <title>exported project</title>
+    <title>ММТ-ГИС. Текст</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -47,6 +47,8 @@
       data-tag="font"
     />
     <link rel="stylesheet" href="{% static "css/style.css" %}" />
+    <link type="image/x-icon" href="{% static "png/Logo_MMT.png" %}" rel="shortcut icon">
+    <link type="Image/x-icon" href="{% static "png/Logo_MMT.png" %}" rel="icon">
   </head>
   <body>
     <div>
@@ -95,13 +97,26 @@
                 </div>
                 <br>
                 <div>
-                  <button class="-vmainscreen-dfframebtn", formaction="{% url 'text' %}">
+                  <button class="-vmainscreen-tomodbtn", formaction="{% url 'text' %}">
                     <span class="-vmainscreen-text13">
                       <span>▶</span>
                     </span>
                   </button>
                 </div>
               </form>
+              <div class="-vmainscreen-container1">
+                {% comment %} {% for story in story_list %} {% endcomment %}
+                <ul class="-vmainscreen-ul list">
+                  <li class="-vmainscreen-li list-item"><span></span></li>
+                </ul>
+                <ul class="-vmainscreen-ul1 list">
+                  <li class="-vmainscreen-li1 list-item"><span>Text</span></li>
+                </ul>
+                <ul class="-vmainscreen-ul2 list">
+                  <li class="-vmainscreen-li2 list-item"><span>Text</span></li>
+                </ul>
+                {% comment %} {% endfor %} {% endcomment %}
+              </div>
               <div class="-vmainscreen-fileframe">
                 <div class="-vmainscreen-fileselem">
                   <form>

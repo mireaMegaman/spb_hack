@@ -60,6 +60,7 @@
     color: #ffffff;
   }
   .login-textinput {
+    width: 340px;
     color: #ffffff;
     border-width: 2px;
     background-color: #121212;
@@ -90,6 +91,7 @@
     color: rgb(255, 255, 255);
   }
   .login-textinput1 {
+    width: 340px;
     color: #ffffff;
     border-width: 2px;
     background-color: #121212;
