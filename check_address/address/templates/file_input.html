@@ -50,7 +50,7 @@
   </head>
   <body>
     <div>
-      <link href="{% static "css/mainpage.css" %}" rel="stylesheet" />
+      <link href="{% static "css/index.css" %}" rel="stylesheet" />
 
       <div class="-vmainscreen-container">
         <div class="-vmainscreen--vmainscreen">
@@ -93,7 +93,7 @@
                   </span>
                 </div>
                 <div class="-vmainscreen-fileselem">
-                  <form class="-vmainscreen-fileselem" action='' enctype="multipart/form-data" method="post">
+                  <form class="-file-form" action='' enctype="multipart/form-data" method="post">
                     {% csrf_token %}
                     <br>
                     <br>
@@ -104,6 +104,7 @@
                         accept=".txt,.docx,.xml,.csv,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                         hidden
                       />
+                      <br>
                       <label class="-vmainscreen-dfframebtn",  for="upload">
                           <img
                               src="{% static "svg/logout2123-dy4d.svg" %}"
@@ -115,19 +116,20 @@
                           </span>
                       </label> 
                       <br>
-                      <button class="-vmainscreen-chartviewbtn">
+                      <button class="-vmainscreen-dfframebtn">
                           <img
                               src="{% static "svg/database2123-w3n9.svg" %}"
                               alt="database2123"
                               class="-vmainscreen-database"
                           />
-                          <span class="-vmainscreen-text13">
+                          <span class="-vmainscreen-text15">
                               <span>Загрузить его в модель</span>
                           </span>
                       </button>
                   </form> 
                 </div>
               </div>
+              <br>
               <div class="-vmainscreen-frame37">
                 <span class="-vmainscreen-text17">
                   <span class="-vmainscreen-text18">

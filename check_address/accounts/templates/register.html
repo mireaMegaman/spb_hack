@@ -46,83 +46,107 @@
             <div class="register-container03">
               <h1 class="register-text">Добро пожаловать</h1>
             </div>
-            <div class="register-container04">
-              <form class="register-form">
-                <span class="register-text01">Имя пользователя*</span>
-                <input
-                  type="text"
-                  placeholder="Ваше имя пользователя"
-                  class="register-textinput input"
-                />
-              </form>
-            </div>
-            <div class="register-container05">
-              <span class="register-text02">
-                <span class="register-text03">
-                  * Пароль не должен быть слишком похож на другую вашу личную
-                  информацию.
+            <form action="" method="post">
+              {% csrf_token %}
+              <div class="register-container04">
+                <div class="register-form">
+                  <span class="register-text01">Имя пользователя*</span>
+                  <input
+                    name="username"
+                    type="text"
+                    placeholder="Ваше имя пользователя"
+                    class="register-textinput input"
+                  />
+                </div>
+              </div>
+              <br>
+              <div class="register-container05">
+                <span class="register-text02">
+                  <span class="register-text03">
+                    * Пароль не должен быть слишком похож на другую вашу личную
+                    информацию.
+                  </span>
+                  <br class="register-text04" />
+                  <br class="register-text05" />
+                  <span class="register-text06">
+                    * Ваш пароль должен содержать как минимум 8 символов.
+                  </span>
+                  <br />
+                  <br class="register-text08" />
+                  <span class="register-text09">
+                    * Пароль не должен быть слишком простым и распространенным.
+                  </span>
+                  <br />
+                  <br class="register-text11" />
+                  <span class="register-text12">
+                    * Пароль не может состоять только из цифр.
+                  </span>
                 </span>
-                <br class="register-text04" />
-                <br class="register-text05" />
-                <span class="register-text06">
-                  * Ваш пароль должен содержать как минимум 8 символов.
-                </span>
-                <br />
-                <br class="register-text08" />
-                <span class="register-text09">
-                  * Пароль не должен быть слишком простым и распространенным.
-                </span>
-                <br />
-                <br class="register-text11" />
-                <span class="register-text12">
-                  * Пароль не может состоять только из цифр.
-                </span>
-              </span>
-            </div>
-            <div class="register-container06">
-              <form class="register-form1">
-                <span class="register-text13">Адрес электронной почты</span>
-                <input
-                  type="text"
-                  placeholder="Ваш адрес электронной почты"
-                  class="register-textinput1 input"
-                />
-              </form>
-            </div>
-            <div class="register-container07">
-              <form class="register-form2">
-                <span class="register-text14">Пароль*</span>
-                <input
-                  type="text"
-                  placeholder="Ваш пароль"
-                  class="register-textinput2 input"
-                />
-              </form>
-            </div>
-            <div class="register-container08">
-              <form class="register-form3">
-                <span class="register-text15">Подтверждение пароля*</span>
-                <input
-                  type="text"
-                  placeholder="Введите пароль второй раз"
-                  class="register-textinput3 input"
-                />
-              </form>
-            </div>
-            <div class="register-container09">
-              <form class="register-form4">
-                <button type="button" class="register-button button">
-                  Регистрация
-                </button>
-              </form>
-            </div>
-            <div class="register-container10">
-              <form class="register-form5">
-                <button type="button" class="register-button1 button">
-                  Уже есть аккаунт? Войти?
-                </button>
-              </form>
-            </div>
+              </div>
+              <br>
+              <div class="register-container06">
+                <div class="register-form1">
+                  <span class="register-text13">Адрес электронной почты</span>
+                  <input
+                    name="email"
+                    type="text"
+                    placeholder="Ваш адрес электронной почты"
+                    class="register-textinput1 input"
+                  />
+                </div>
+              </div>
+              <div class="register-container07">
+                <div class="register-form2">
+                  <span class="register-text14">Пароль*</span>
+                  <input
+                    name="password1"
+                    type="password"
+                    placeholder="Ваш пароль"
+                    class="register-textinput2 input"
+                  />
+                </div>
+              </div>
+              <div class="register-container08">
+                <div class="register-form3">
+                  <span class="register-text15">Подтверждение пароля*</span>
+                  <input
+                    name="password2"
+                    type="password"
+                    placeholder="Введите пароль второй раз"
+                    class="register-textinput3 input"
+                  />
+                </div>
+              </div>
+              <div class="register-container09">
+                <div class="register-form4">
+                  <button type="submit" class="register-button button">
+                    Регистрация
+                  </button>
+                </div>
+              </div>
+              <div class="register-container10">
+                <form class="register-form5">
+                  <button type="button" class="register-button1 button", formaction="{% url 'login' %}">
+                    Уже есть аккаунт? Войти?
+                  </button>
+                </form>
+              </div>
+            </form>
+                {% comment %} <form method="POST">
+                    {% csrf_token %}
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4">Добро пожаловать в AddressChecked</legend>
+                        {{ form|crispy }}
+                    </fieldset>
+                    <div class="form-group">
+                        <button class="btn btn-outline-info" type="submit">Регистрация</button>
+                    </div>
+                </form>
+                <div class="border-top pt-3">
+                    <small class="text-muted">
+                        Уже есть аккаунт? <a class="ml-2" href="/login">Вход</a>
+                    </small>
+                </div> {% endcomment %}
           </div>
         </div>
       </div>

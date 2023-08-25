@@ -46,31 +46,46 @@
             <div class="login-container3">
               <h1 class="login-text">Авторизация</h1>
             </div>
-            <div class="login-container4">
-              <form class="login-form">
-                <span class="login-text1">Имя пользователя*</span>
-                <input
-                  type="text"
-                  placeholder="Ваше имя пользователя"
-                  class="login-textinput input"
-                />
-              </form>
-            </div>
-            <div class="login-container5">
-              <form class="login-form1">
-                <span class="login-text2">Пароль*</span>
-                <input
-                  type="text"
-                  placeholder="Ваш пароль"
-                  class="login-textinput1 input"
-                />
-              </form>
-            </div>
-            <div class="login-container6">
-              <form class="login-form2">
-                <button type="button" class="login-button button">Вход</button>
-              </form>
-            </div>
+            <form>
+              {% csrf_token %}
+              <div class="login-container4">
+                <div class="login-form">
+                  <span class="login-text1">Имя пользователя*</span>
+                  <input
+                    name="username"
+                    type="text"
+                    placeholder="Ваше имя пользователя"
+                    class="login-textinput input"
+                  />
+                </div>
+              </div>
+              <div class="login-container5">
+                <div class="login-form1">
+                  <span class="login-text2">Пароль*</span>
+                  <input
+                    name="password"
+                    type="password"
+                    placeholder="Ваш пароль"
+                    class="login-textinput1 input"
+                  />
+                </div>
+              </div>
+              <div class="login-container6">
+                <div class="login-form2">
+                  <button type="submit" class="login-button button">
+                    Вход
+                  </button>
+                </div>
+              </div>
+              <br>
+            </form>
+            {% comment %} <form action="" method="post">
+                {% csrf_token %}
+                <table>
+                {{ form.as_p }} 
+                </table>
+                <input type="submit" value="Отправить">
+            </form> {% endcomment %}
           </div>
         </div>
       </div>

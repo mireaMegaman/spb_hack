@@ -50,7 +50,7 @@
   </head>
   <body>
     <div>
-      <link href="{% static "css/mainpage.css" %}" rel="stylesheet" />
+      <link href="{% static "css/index.css" %}" rel="stylesheet" />
 
       <div class="-vmainscreen-container">
         <div class="-vmainscreen--vmainscreen">
@@ -106,7 +106,6 @@
                 <div class="-vmainscreen-fileselem">
                   <form>
                     <button class="-vmainscreen-chartviewbtn", formaction="{% url 'file' %}">
-                      <div class="-vmainscreen-deviceupbtn">
                       <span class="-vmainscreen-text15">
                         <span>Загрузить ваш файл</span>
                       </span>
@@ -136,8 +135,8 @@
                     <br>
                     <br>
                     <span>
-                        Для работы с файлами - нажмите соответсвующую кнопку выше
-                        {{object.text}}, {{object.corrected_text}}
+                        Для работы с файлами - нажмите кнопку Загрузить ваш файл
+                        {{object.text}} {{object.corrected_text}}
                     </span>
                   </span>
               </div>
