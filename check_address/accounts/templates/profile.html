@@ -77,14 +77,41 @@
                         Логин:&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
                         &nbsp;&nbsp;
                       </span>
+                      <span class="-vprofile-text1">
+                        {% if user.is_authenticated %}
+                            <p>{{ user.get_username }}</p>
+                        {% else %}
+                            <p>Войдите в аккаунт</p>
+                        {% endif %}
+                      </span>
                     </div>
                     <div class="-vprofile-frame42">
                       <span class="-vprofile-text2">
                         Ваш почтовый адрес:&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
                       </span>
+                      <span class="-vprofile-text2">
+                        {% if user.is_authenticated %}
+                            <p>{{ user.get_email }}</p>
+                        {% else %}
+                            <p>Войдите в аккаунт</p>
+                        {% endif %}
+                      </span>
+                    </div>
+                    <div class="-vprofile-frame41">
+                      <span class="-vprofile-text1">
+                        Модификатор доступа:
+                      </span>
+                      <span class="-vprofile-text1">
+                        {% if user.is_superuser %}
+                          <p>Администратор</p>
+                        {% else %}
+                          <p>Обычный пользователь</p>
+                        {% endif %}
+                      </span>
                     </div>
                   </div>
                 </div>
+                <br>
                 <img
                   alt="Devider1712"
                   src="{% static "png/devider1712-jbu3-200h.png" %}"
