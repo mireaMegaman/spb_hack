@@ -17,6 +17,7 @@
     background-color: #181818;
   }
   .-vprofile-header {
+    height: 60px;
     display: flex;
     padding: 7px 20px;
     overflow: hidden;
@@ -170,4 +171,17 @@
   .-vprofile-githubbtn {
     width: 40px;
     height: 40px;
+  }
+  .-vprofile-chartviewbtn {
+    gap: 10px;
+    height: 50px;
+    display: flex;
+    padding: 5px 10px;
+    overflow: hidden;
+    align-self: stretch;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+    background-color: rgba(18, 18, 18, 1);
+    transition: all 0.7s;
   }

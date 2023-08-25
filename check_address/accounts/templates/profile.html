@@ -33,25 +33,33 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
       data-tag="font"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="{% static "css/style.css" %}" />
   </head>
   <body>
     <div>
-      <link href="./index.css" rel="stylesheet" />
+      <link href="{% static "css/profile_user.css" %}" rel="stylesheet" />
 
       <div class="-vprofile-container">
         <div class="-vprofile--vprofile">
           <div class="-vprofile-header">
-            <img
-              alt="menubtn1743"
-              src="public/external/menubtn1743-b0n8.svg"
-              class="-vprofile-menubtn"
-            />
-            <img
-              alt="userbtn1747"
-              src="public/external/userbtn1747-8s7.svg"
-              class="-vprofile-userbtn"
-            />
+            <form>
+              <button class="test-btn-class", formaction="{% url 'text' %}">
+                <img
+                  src="{% static "svg/menubtn5126-mnon.svg" %}"
+                  alt="menubtn5126"
+                  class="-vprofile-menubtn"
+                />
+              </button>
+            </form>
+            <form>
+              <button class="test-btn-class", formaction="{% url 'profile' %}">
+                <img
+                  alt="userbtn1747"
+                  src="{% static "svg/userbtn1747-8s7.svg" %}"
+                  class="-vprofile-userbtn"
+                />
+              </button>
+            </form>
           </div>
           <div class="-vprofile-mainfr">
             <div class="-vprofile-elemsframe">
@@ -59,7 +67,8 @@
                 <span class="-vprofile-text">Профиль пользователя</span>
                 <img
                   alt="Devider1712"
-                  src="public/external/devider1712-jbu3-200h.png"
+                  src="{% static "png/devider1712-jbu3-200h.png" %}"
+                  {% comment %} src="public/external/devider1712-jbu3-200h.png" {% endcomment %}
                   class="-vprofile-devider"
                 />
                 <div class="-vprofile-frame18">
@@ -77,15 +86,53 @@
                     </div>
                   </div>
                 </div>
-                <button type="button" class="-vprofile-button button">
-                  Забыли пароль?
-                </button>
+                <form>
+                  <button type="button" class="-vprofile-button">
+                    Забыли пароль?
+                  </button>
+                </form>
+                <div class="-vprofile-frame18">
+                  <div class="-vprofile-frame17">
+                    <div class="-vprofile-frame41">
+                      <form>
+                        <button class="-vprofile-chartviewbtn", formaction="{% url 'login' %}">
+                          Войти
+                        </button>
+                      </form>
+                    </div>
+                    <div class="-vprofile-frame42">
+                      <form>
+                        <button class="-vprofile-chartviewbtn", formaction="{% url 'register' %}">
+                          Зарегестрироваться
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div class="-vprofile-footer">
             <div class="-vprofile-footerframe">
-              <img
+              <form>
+                <button class="safaribtn", formaction="https://www.google.com/">
+                  <img
+                    src="{% static "svg/compassbtn1762-l36e.svg" %}"
+                    alt="compassbtn1762"
+                    class="-vprofile-compassbtn"
+                  />
+                </button>
+              </form>
+              <form>
+                <button class="ghbtn", formaction="https://github.com/mireaMegaman/hackaton/">
+                  <img
+                    src="{% static "svg/githubbtn1765-rsa.svg" %}"
+                    alt="githubbtn1765"
+                    class="-vprofile-githubbtn"
+                  />
+                </button>
+              </form>
+              {% comment %} <img
                 alt="compassbtn1762"
                 src="public/external/compassbtn1762-l36e.svg"
                 class="-vprofile-compassbtn"
@@ -94,7 +141,7 @@
                 alt="githubbtn1765"
                 src="public/external/githubbtn1765-rsa.svg"
                 class="-vprofile-githubbtn"
-              />
+              /> {% endcomment %}
             </div>
           </div>
         </div>

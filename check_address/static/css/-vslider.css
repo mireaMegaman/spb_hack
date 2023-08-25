@@ -29,6 +29,7 @@
     align-self: stretch;
     align-items: center;
     flex-shrink: 0;
+    justify-content: space-between;
     background-color: rgba(18, 18, 18, 1);
   }
   .-vslider-menubtn {

@@ -59,6 +59,15 @@
                 />
               </button>
             </form>
+            <form>
+              <button class="test-btn-class", formaction="{% url 'profile' %}">
+                <img
+                  alt="userbtn1747"
+                  src="{% static "svg/userbtn1747-8s7.svg" %}"
+                  class="-vprofile-userbtn"
+                />
+              </button>
+            </form>
           </div>
           <div class="-vslider-slidermenu">
             <div class="-vslider-welcome">
@@ -71,38 +80,23 @@
                 <span class="-vslider-text02"><span>Здесь вы можете:</span></span>
               </div>
               <div class="-vslider-pointsframe1">
-                <div class="-vslider-frame38">
-                  <span class="-vslider-text04">
-                    <span>
-                      <span>1.</span>
-                      <br />
-                      <span></span>
-                      <br />
-                      <span>2.</span>
-                      <br />
-                      <span>3.</span>
-                      <br />
-                      <span>4.</span>
-                      <br />
-                      <span></span>
-                    </span>
-                  </span>
-                </div>
                 <div class="-vslider-textframep1">
                   <span class="-vslider-text17">
                     <span>
                       <span>
-                        Ознакомьтесь с техническим заданием наших партнеров;
+                        1. Ознакомьтесь с техническим заданием наших партнеров;
                       </span>
                       <br />
-                      <span></span>
-                      <br />
-                      <span>Посмотрете инструкцию по использованию приложения;</span>
-                      <br />
-                      <span>Обратитесь к документации;</span>
+                      <span>
+                        2. Посмотрете инструкцию по использованию приложения;
+                      </span>
                       <br />
                       <span>
-                        Перейдите на внешние ссылки нашей команды (например, GitHub или
+                        3. Обратитесь к документации;
+                      </span>
+                      <br />
+                      <span>
+                        4. Перейдите на внешние ссылки нашей команды (например, GitHub или
                         Телеграмм);
                       </span>
                     </span>
@@ -129,11 +123,11 @@
                     <span>
                       <span>1. Построить модель, которая сможет адаптироваться к задачам определения корректного адреса, содержащегося в исходной базе данных.</span>
                       <br />
-                      <span>2. Работа с наборами данных с адресами разных форматов и произвольно введенными адресами.</span>
+                      <span>2. Поработать с наборами данных с адресами разных форматов и произвольно введенными адресами.</span>
                       <br />
-                      <span>3. Решение проблемы неправильного определения адресов и координат</span>
+                      <span>3. Увидеть решение проблемы неправильного определения адресов и координат</span>
                       <br />
-                      <span>4. Создание полезного приложения для решить вопрос совершенствования методов определения корректного адреса из Государственных информационных систем.</span>
+                      <span>4. Проанализировать полезность модели для решения вопросов совершенствования методов определения корректного адреса из Государственных информационных систем.</span>
                     </span>
                   </span>
                 </div>
@@ -147,7 +141,7 @@
             />
             <div class="-vslider-mainmenubtns">
               <form>
-                <button class="-vslider-docsbtn", formaction="https://github.com/mireaMegaman/hackaton#readme">
+                <button class="-vslider-docsbtn", formaction="https://github.com/mireaMegaman/spb_hack/tree/django_project#readme">
                   <img
                     src="{% static "svg/filetext1789-hb4b.svg" %}"
                     {% comment %} src="public/external/filetext1789-hb4b.svg" {% endcomment %}
@@ -156,7 +150,7 @@
                   />
                   <span class="-vslider-text49"><span>Документация</span></span>
                 </button>
-                <button class="-vslider-repbtn", formaction="https://github.com/mireaMegaman/hackaton">
+                <button class="-vslider-repbtn", formaction="https://github.com/mireaMegaman/spb_hack/tree/django_project">
                   <img
                     src="{% static "svg/github1797-561.svg" %}"
                     {% comment %} src="public/external/github1797-561.svg" {% endcomment %}
@@ -165,24 +159,23 @@
                   />
                   <span class="-vslider-text51"><span>Репозиторий</span></span>
                 </button>
-                <button class="-vslider-repbtn1", formaction="https://t.me/al_goodini">
+                <button class="-vslider-repbtn1", formaction="https://www.youtube.com/channel/UC5qC_I5o2aatXDSxTHbjxzg">
                   <img
                     src="{% static "svg/send1801-3q7h.svg" %}"
                     {% comment %} src="public/external/send1801-3q7h.svg" {% endcomment %}
                     alt="send1801"
                     class="-vslider-send"
                   />
-                  <span class="-vslider-text53"><span>Телеграмм</span></span>
+                  <span class="-vslider-text53"><span>YouTube</span></span>
                 </button>
-                <button class="-vslider-rateappbtn", formaction="https://github.com/mireaMegaman/hackaton/issues">
+                {% comment %} <button class="-vslider-rateappbtn", formaction="https://github.com/mireaMegaman/hackaton/issues">
                   <img
                     src="{% static "svg/checksquare1806-qysc.svg" %}"
-                    {% comment %} src="public/external/checksquare1806-qysc.svg" {% endcomment %}
                     alt="checksquare1806"
                     class="-vslider-checksquare"
                   />
                   <span class="-vslider-text55"><span>Инструкция по установке</span></span>
-                </button>
+                </button> {% endcomment %}
               </form>
             </div>
             <img
@@ -212,12 +205,12 @@
                 <div class="-vslider-frame34">
                   <span class="-vslider-text74">
                     <span>
-                      <span>Цифровому прорыву</span>
-                      <br />
-                      <span>Правительству Санкт-Петербурга</span>
-                      <br />
-                      <span>Нашим кураторам на этом этапе</span>
-                      <br />
+                      <span>Цифровому прорыву;</span>
+                      <br>
+                      <span>Правительству Санкт-Петербурга;</span>
+                      <br>
+                      <span>Нашим кураторам на этом этапе;</span>
+                      <br>
                     </span>
                   </span>
                 </div>
