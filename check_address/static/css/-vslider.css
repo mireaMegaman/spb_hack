@@ -1,0 +1,550 @@
+.-vslider-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(7, 7, 7, 1);
+  }
+  .-vslider--vslider {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+    background-color: rgba(7, 7, 7, 1);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .-vslider--vslider:hover {
+    opacity: 1;
+  }
+  .-vslider-header {
+    height: 60px;
+    display: flex;
+    padding: 7px 20px;
+    overflow: hidden;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: rgba(18, 18, 18, 1);
+  }
+  .-vslider-menubtn {
+    width: 35px;
+    height: 35px;
+    transition: 0.5s;
+  }
+  /* .-vslider-menubtn:hover {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 1);
+  } */
+  .-vslider-slidermenu {
+    gap: 10px;
+    height: 910px;
+    display: flex;
+    padding: 10px;
+    overflow: hidden;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+    background-color: rgba(34, 34, 34, 1);
+  }
+  .-vslider-welcome {
+    gap: 5px;
+    display: flex;
+    padding: 0 0 0 2px;
+    align-self: stretch;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .-vslider-text {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 139.9999976158142%;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vslider-fistfield {
+    gap: 3px;
+    display: flex;
+    padding: 5px 7px;
+    overflow: hidden;
+    align-self: stretch;
+    align-items: flex-start;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(41, 41, 41, 1);
+  }
+  .-vslider-frame35 {
+    gap: 10px;
+    display: flex;
+    align-self: stretch;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+  .-vslider-text02 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 139.9999976158142%;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vslider-pointsframe1 {
+    gap: 10px;
+    display: flex;
+    padding: 10px 0;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .-vslider-frame38 {
+    gap: 10px;
+    height: 120px;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  .-vslider-text04 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 139.9999976158142%;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vslider-textframep1 {
+    gap: 10px;
+    display: flex;
+    flex-grow: 1;
+    align-self: stretch;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .-vslider-text17 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 16px;
+    align-self: stretch;
+    font-style: Regular;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 139.9999976158142%;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vslider-devider {
+    width: auto;
+    height: 3px;
+    align-self: stretch;
+    border-radius: 3px;
+  }
+  .-vslider-secfield {
+    gap: 3px;
+    display: flex;
+    padding: 5px 7px;
+    overflow: hidden;
+    align-self: stretch;
+    align-items: flex-start;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(41, 41, 41, 1);
+  }
+  .-vslider-frame36 {
+    gap: 10px;
+    display: flex;
+    align-self: stretch;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+  .-vslider-text28 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 139.9999976158142%;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vslider-text29 {
+    font-weight: 400;
+  }
+  .-vslider-text30 {
+    font-weight: 700;
+  }
+  .-vslider-pointsframe2 {
+    gap: 5px;
+    display: flex;
+    padding: 10px 0;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .-vslider-frame39 {
+    gap: 10px;
+    height: 80px;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  .-vslider-text31 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 139.9999976158142%;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vslider-textframep2 {
+    gap: 10px;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+  }
+  .-vslider-text40 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    flex-grow: 1;
+    font-size: 16px;
+    align-self: stretch;
+    font-style: Regular;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 139.9999976158142%;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vslider-devider1 {
+    width: auto;
+    height: 3px;
+    align-self: stretch;
+    border-radius: 3px;
+  }
+  .-vslider-mainmenubtns {
+    gap: 7px;
+    display: flex;
+    padding: 0 10px;
+    align-self: stretch;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .-vslider-docsbtn {
+    margin-bottom: 5px;
+    gap: 10px;
+    width: 170px;
+    height: 42px;
+    display: flex;
+    padding: 5px 10px;
+    overflow: hidden;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 5px;
+    justify-content: center;
+    background-color: rgba(56, 56, 56, 1);
+    transition: 0.5s;
+  }
+  .-vslider-docsbtn:hover {
+    height: 47px;
+    background-color: rgba(60, 60, 60, 1);
+  }
+  .-vslider-filetext {
+    width: 24px;
+    height: 24px;
+  }
+  .-vslider-text49 {
+    color: rgba(127, 236, 197, 1);
+    height: auto;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vslider-repbtn {
+    margin-bottom: 5px;
+    gap: 10px;
+    width: 170px;
+    height: 40px;
+    display: flex;
+    padding: 5px 10px;
+    overflow: hidden;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 5px;
+    justify-content: center;
+    background-color: rgba(56, 56, 56, 1);
+    transition: 0.5s;
+  }
+  .-vslider-repbtn:hover {
+    height: 45px;
+    background-color: rgba(60, 60, 60, 1);
+  }
+  .-vslider-github {
+    width: 24px;
+    height: 24px;
+  }
+  .-vslider-text51 {
+    color: rgba(127, 236, 197, 1);
+    height: auto;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vslider-repbtn1 {
+    margin-bottom: 5px;
+    gap: 10px;
+    width: 170px;
+    height: 40px;
+    display: flex;
+    padding: 5px 10px;
+    overflow: hidden;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 5px;
+    justify-content: center;
+    background-color: rgba(56, 56, 56, 1);
+    transition: 0.5s;
+  }
+  .-vslider-repbtn1:hover {
+    height: 45px;
+    background-color: rgba(60, 60, 60, 1);
+  }
+  .-vslider-send {
+    width: 24px;
+    height: 24px;
+  }
+  .-vslider-text53 {
+    color: rgba(127, 236, 197, 1);
+    height: auto;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vslider-rateappbtn {
+    margin-bottom: 5px;
+    gap: 3px;
+    width: 170px;
+    height: 40px;
+    display: flex;
+    padding: 5px 10px;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 5px;
+    justify-content: center;
+    background-color: rgba(56, 56, 56, 1);
+    transition: 0.5s;
+  }
+  .-vslider-rateappbtn:hover {
+    height: 45px;
+    background-color: rgba(60, 60, 60, 1);
+  }
+  .-vslider-checksquare {
+    width: 24px;
+    height: 24px;
+  }
+  .-vslider-text55 {
+    color: rgba(127, 236, 197, 1);
+    height: auto;
+    font-size: 14px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vslider-devider2 {
+    width: auto;
+    height: 3px;
+    align-self: stretch;
+    border-radius: 3px;
+  }
+  .-vslider-lastfield {
+    gap: 3px;
+    display: flex;
+    padding: 5px 7px;
+    overflow: hidden;
+    align-self: stretch;
+    align-items: flex-start;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(41, 41, 41, 1);
+  }
+  .-vslider-frame33 {
+    gap: 10px;
+    display: flex;
+    align-self: stretch;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+  .-vslider-text57 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 139.9999976158142%;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vslider-text58 {
+    font-weight: 400;
+  }
+  .-vslider-text59 {
+    font-weight: 700;
+  }
+  .-vslider-frame32 {
+    gap: 10px;
+    width: 324px;
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .-vslider-text61 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 139.9999976158142%;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vslider-frame34 {
+    gap: 10px;
+    width: 301px;
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .-vslider-text74 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 16px;
+    align-self: stretch;
+    font-style: Regular;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 139.9999976158142%;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vslider-backbtn {
+    gap: 10px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(56, 56, 56, 1);
+    transition: 0.5s;
+  }
+  .-vslider-backbtn:hover {
+    gap: 10px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(60, 60, 60, 1);
+  }
+  .-vslider-codesandbox {
+    width: 24px;
+    height: 24px;
+  }
+  .-vslider-footer {
+    height: 60px;
+    display: flex;
+    overflow: hidden;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+  }
+  .-vslider-footerframe {
+    gap: 150px;
+    height: 60px;
+    display: flex;
+    flex-grow: 1;
+    align-self: stretch;
+    align-items: center;
+    padding-top: 0 20px;
+    padding-right: 0 20px;
+    padding-bottom: 0 20px;
+    justify-content: center;
+    background-color: rgba(18, 18, 18, 1);
+  }
+  .-vslider-compassbtn {
+    width: 35px;
+    height: 35px;
+    transition: 0.5s;
+  }
+  .-vslider-compassbtn:hover {
+    width: 40px;
+    height: 40px;
+  }
+  .-vslider-githubbtn {
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+  }
+  .-vslider-githubbtn:hover{
+    width: 45px;
+    height: 45px;
+  }

@@ -1,0 +1,173 @@
+.-vprofile-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  .-vprofile--vprofile {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+    background-color: #181818;
+  }
+  .-vprofile-header {
+    display: flex;
+    padding: 7px 20px;
+    overflow: hidden;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: space-between;
+    background-color: rgba(18, 18, 18, 1);
+  }
+  .-vprofile-menubtn {
+    width: 32px;
+    height: 33px;
+  }
+  .-vprofile-userbtn {
+    width: 28px;
+    height: 26px;
+  }
+  .-vprofile-mainfr {
+    gap: 40px;
+    height: 925px;
+    display: flex;
+    padding: 15px 0;
+    align-self: center;
+    align-items: center;
+    padding-top: 50px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .-vprofile-elemsframe {
+    gap: 30px;
+    width: 580px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  .-vprofile-profiler {
+    gap: 15px;
+    display: flex;
+    padding: 20px;
+    overflow: hidden;
+    align-items: center;
+    border-radius: 15px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #121212;
+  }
+  .-vprofile-text {
+    color: rgb(255, 255, 255);
+    width: 300px;
+    height: auto;
+    font-size: 16px;
+    font-style: Bold;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 140.023%;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vprofile-devider {
+    width: auto;
+    height: 3px;
+    align-self: stretch;
+    border-radius: 3px;
+  }
+  .-vprofile-frame18 {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .-vprofile-frame17 {
+    gap: 25px;
+    width: 317px;
+    height: 120px;
+    display: flex;
+    padding: 5px;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  .-vprofile-frame41 {
+    gap: 10px;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .-vprofile-text1 {
+    color: rgb(255, 255, 255);
+    height: auto;
+    flex-grow: 1;
+    font-size: 16px;
+    font-style: Bold;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vprofile-frame42 {
+    gap: 10px;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .-vprofile-text2 {
+    color: rgb(255, 255, 255);
+    height: auto;
+    flex-grow: 1;
+    font-size: 16px;
+    font-style: Bold;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vprofile-button {
+    color: #878787;
+    border-width: 0px;
+    background-color: #121212;
+  }
+  .-vprofile-footer {
+    display: flex;
+    overflow: hidden;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+  }
+  .-vprofile-footerframe {
+    gap: 150px;
+    display: flex;
+    padding: 0 20px;
+    flex-grow: 1;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(18, 18, 18, 1);
+  }
+  .-vprofile-compassbtn {
+    width: 35px;
+    height: 35px;
+  }
+  .-vprofile-githubbtn {
+    width: 40px;
+    height: 40px;
+  }

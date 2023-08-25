@@ -1,0 +1,357 @@
+.-vmainscreen-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(7, 7, 7, 1);
+  }
+  .-vmainscreen--vmainscreen {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+    background-color: rgba(7, 7, 7, 1);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .-vmainscreen--vmainscreen:hover {
+    opacity: 1;
+  }
+  .-vmainscreen-header {
+    height: 60px;
+    display: flex;
+    padding: 7px 20px;
+    overflow: hidden;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: rgba(18, 18, 18, 1);
+  }
+  .-vmainscreen-menubtn {
+    width: 35px;
+    height: 35px;
+    padding-top: 0px;
+    border-width: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    transition: 0.5s;
+  }
+  /* .-vmainscreen-menubtn:hover {
+    width: 40px;
+    height: 40px;
+  } */
+  .-vmainscreen-mainfr {
+    gap: 40px;
+    height: 910px;
+    display: flex;
+    padding: 15px 0;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+  /* MMT START */
+  .-vmainscreen-mmmenu {
+    gap: 5px;
+    width: 250px;
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: rgba(24, 24, 24, 1);
+    transition: all 0.7s;
+  }
+  .-vmainscreen-mmmenu:hover {
+    width: 260px;
+    padding: 20px;
+    background-color: rgb(39, 39, 39);
+  }
+  .-vmainscreen-text {
+    color: rgba(127, 236, 197, 1);
+    height: auto;
+    font-size: 20px;
+    font-style: Bold;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  /* MMT END */
+  
+  .-vmainscreen-elemsframe {
+    gap: 30px;
+    width: 400px;
+    height: 630px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  
+  .-vmainscreen-textinput {
+    color: #ffffff;
+    padding: 15px;
+    width: 320px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: #181818;
+  }
+  .myfieldclass {
+    color: #ffffff;
+    padding: 15px;
+    width: 320px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: #181818;
+  }
+  
+  /* myfieldclass */
+  .-vmainscreen-fileframe {
+    gap: 10px;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    flex-direction: column;
+  }
+  .-vmainscreen-filebox {
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 320px;
+    height: 245px;
+    display: flex;
+    padding: 10px;
+    align-items: flex-end;
+    flex-shrink: 0;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(18, 18, 18, 1);
+    transition: 0.7s;
+  }
+  .-vmainscreen-filebox:hover {
+    background-color: rgba(25, 25, 25, 1);
+  }
+  .-vmainscreen-text02 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 18px;
+    align-self: stretch;
+    font-style: Regular;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vmainscreen-text03 {
+    color: rgba(255, 255, 255, 1);
+  }
+  .-vmainscreen-fileselem {
+    gap: 8px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+  }
+  /* DB BTN */
+  .-vmainscreen-dfframebtn {
+    gap: 10px;
+    height: 20px;
+    display: flex;
+    padding: 2px 10px;
+    overflow: hidden;
+    align-self: stretch;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+    background-color: rgba(18, 18, 18, 1);
+    text-size-adjust: 18px;
+    transition: 0.7s;
+  }
+  .-vmainscreen-dfframebtn:hover {
+    background-color: rgba(25, 25, 25, 1);
+  }
+  .-vmainscreen-database {
+    width: 24px;
+    height: 24px;
+  }
+  /* LIB BTN */
+  .-vmainscreen-text13 {
+    color: rgba(127, 236, 197, 1);
+    height: auto;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vmainscreen-chartviewbtn {
+    gap: 10px;
+    height: 50px;
+    display: flex;
+    padding: 5px 10px;
+    overflow: hidden;
+    align-self: stretch;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+    background-color: rgba(18, 18, 18, 1);
+    transition: all 0.7s;
+  }
+  .-vmainscreen-chartviewbtn:hover {
+    background-color: rgba(25, 25, 25, 1);
+  }
+  /* BTNS END */
+  
+  .-vmainscreen-deviceupbtn {
+    gap: 10px;
+    width: auto;
+    height: 28px;
+    display: flex;
+    padding: 2px;
+    overflow: hidden;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(18, 18, 18, 1);
+  }
+  .-vmainscreen-logout {
+    width: 24px;
+    height: 24px;
+  }
+  .-vmainscreen-text15 {
+    color: rgba(127, 236, 197, 1);
+    height: auto;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vmainscreen-frame37 {
+    gap: 10px;
+    margin-top: 40px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .-vmainscreen-text17 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    flex-grow: 1;
+    font-size: 18px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .-vmainscreen-text18 {
+    font-weight: 400;
+  }
+  .-vmainscreen-text19 {
+    font-weight: 700;
+  }
+  .-vmainscreen-text20 {
+    font-weight: 400;
+  }
+  .-vmainscreen-text21 {
+    font-weight: 700;
+  }
+  .-vmainscreen-footer {
+    display: flex;
+    overflow: hidden;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+  }
+  .-vmainscreen-footerframe {
+    gap: 150px;
+    height: 60px;
+    display: flex;
+    padding: 0 20px;
+    flex-grow: 1;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(18, 18, 18, 1);
+  }
+  .-vmainscreen-compassbtn {
+    width: 35px;
+    height: 35px;
+    padding-top: 0px;
+    border-width: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    transition: 0.5s;
+  }
+  .-vmainscreen-compassbtn:hover {
+    width: 40px;
+    height: 40px;
+  }
+  .-vmainscreen-githubbtn {
+    width: 40px;
+    height: 40px;
+    padding-top: 0px;
+    border-width: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    transition: 0.5s;
+  }
+  .-vmainscreen-githubbtn:hover {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .-vmegamen-button {
+    gap: 10px;
+    height: 45px;
+    display: flex;
+    padding: 2px 10px;
+    overflow: hidden;
+    align-self: stretch;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+    background-color: rgba(18, 18, 18, 1);
+    color: #7ce8c2;
+    transition: 0.7s;
+  
+  }
+  .-vmegamen-button:hover {
+    color: #7ce8c2;
+    background-color: rgba(25, 25, 25, 1);
+  }
+  
+  .-vmainscreen-frame38 {
+    gap: 30px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+  }
