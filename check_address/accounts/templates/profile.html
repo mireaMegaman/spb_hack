@@ -86,23 +86,23 @@
                     </div>
                   </div>
                 </div>
-                <form>
+                {% comment %} <form>
                   <button type="button" class="-vprofile-button">
                     Забыли пароль?
                   </button>
-                </form>
+                </form> {% endcomment %}
                 <div class="-vprofile-frame18">
                   <div class="-vprofile-frame17">
                     <div class="-vprofile-frame41">
                       <form>
-                        <button class="-vprofile-chartviewbtn", formaction="{% url 'login' %}">
+                        <button class="-vprofile-button", formaction="{% url 'login' %}">
                           Войти
                         </button>
                       </form>
                     </div>
                     <div class="-vprofile-frame42">
                       <form>
-                        <button class="-vprofile-chartviewbtn", formaction="{% url 'register' %}">
+                        <button class="-vprofile-button", formaction="{% url 'register' %}">
                           Зарегестрироваться
                         </button>
                       </form>
