@@ -9,15 +9,19 @@ from django.utils.decorators import method_decorator
 import os
 import csv
 import openpyxl
-
+from typing import Tuple
 # Create your views here.
 
 model_path = os.path.join('check_streets', 'ML', 'model.pt')
 
 
-def updata_address(address: str):
+def updata_address(address: str) -> Tuple[list, list]:
     # Здесь должна быть модель
-    return address + ' we are the champions\n'
+    corrected_text = []
+    probability = []
+    corrected_text.append(address + ' we are the champions\n')
+    probability.append('80')
+    return corrected_text, probability
 
 
 def read_txt(file: str) -> list:
@@ -57,20 +61,23 @@ class CheckTextView(View):
         form_text = AddressTextForm()
         self.context['form_text'] = form_text
         return render(request, 'text_input.html', context=self.context)
-    
+
     @method_decorator(login_required)
     def post(self, request):
         form_text = AddressTextForm(request.POST)
         if form_text.is_valid():
             object = form_text.save(commit=False)
             object.user = request.user
-            object.corrected_text = updata_address(object.text)
+            corrected_text, probability = updata_address(object.text)
+            object.corrected_text = corrected_text[0]
             object.save()
-            self.context['object'] = object
-            print(object.corrected_text)
+            self.context['corrected_text'] = corrected_text
+            self.context['probability'] = probability
+            print(corrected_text, probability)
             return render(request, 'text_input.html', self.context)
         else:
-            raise Http404
+            return render(request, 'text_input.html', context=self.context)
+
 
 class CheckFileView(View):
     context = {}
@@ -80,7 +87,7 @@ class CheckFileView(View):
         self.context['form_file'] = form_file
         self.context['object'] = None
         return render(request, 'file_input.html', context=self.context)
-    
+
     @method_decorator(login_required)
     def post(self, request):
         form_file = AddressFileForm(request.POST, request.FILES)
