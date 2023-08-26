@@ -14,21 +14,18 @@ from typing import Tuple
 
 model_path = os.path.join('check_streets', 'ML', 'model.pt')
 
+class OutputData:
+    def __init__(self, object_id, text, prob) -> None:
+        self.object_id = object_id
+        self.text = text
+        self.probability = prob
 
-def updata_address(address: str) -> Tuple[list, list]:
+
+def updata_address(address: str):
     # Здесь должна быть модель
-    corrected_text = []
-    probability = []
-    corrected_text.append(address + ' we are the champions\n')
-    probability.append('80')
-    return corrected_text, probability
-
-
-def read_txt(file: str) -> list:
-    with open(file, 'r') as f:
-        file_content = f.readlines()
-        file_content = [el.strip() for el in file_content]
-    return file_content
+    list_ans = []
+    
+    return list_ans
 
 
 def read_csv(file: str) -> list:
@@ -68,12 +65,10 @@ class CheckTextView(View):
         if form_text.is_valid():
             object = form_text.save(commit=False)
             object.user = request.user
-            corrected_text, probability = updata_address(object.text)
-            object.corrected_text = corrected_text[0]
+            list_ans = updata_address(object.text)
+            object.corrected_text = list_ans[0].text
             object.save()
-            self.context['corrected_text'] = corrected_text
-            self.context['probability'] = probability
-            print(corrected_text, probability)
+            self.context['addresses'] = list_ans
             return render(request, 'text_input.html', self.context)
         else:
             return render(request, 'text_input.html', context=self.context)
@@ -99,8 +94,6 @@ class CheckFileView(View):
                 user=request.user).latest('id')
             format_file = output_request.file.path[-3:]
             match format_file:
-                case 'txt':
-                    list_address = read_txt(output_request.file.path)
                 case 'csv':
                     list_address = read_csv(output_request.file.path)
                 case 'xls' | 'lsx':
