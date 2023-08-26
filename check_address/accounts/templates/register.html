@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
-    <title>Register - exported project</title>
+    <title>ММТ-ГИС. Регистрация</title>
     <meta property="og:title" content="Register - exported project" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
@@ -35,6 +35,8 @@
       data-tag="font"
     />
     <link rel="stylesheet" href="{% static "css/style.css" %}" />
+    <link type="image/x-icon" href="{% static "png/Logo_MMT.png" %}" rel="shortcut icon">
+    <link type="Image/x-icon" href="{% static "png/Logo_MMT.png" %}" rel="icon">
   </head>
   <body>
     <div>
@@ -126,7 +128,7 @@
               </div>
               <div class="register-container10">
                 <form class="register-form5">
-                  <button type="button" class="register-button1 button", formaction="{% url 'login' %}">
+                  <button class="register-button1", formaction="{% url 'login' %}">
                     Уже есть аккаунт? Войти?
                   </button>
                 </form>

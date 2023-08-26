@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
-    <title>exported project</title>
+    <title>ММТ-ГИС. Файлы</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -47,6 +47,8 @@
       data-tag="font"
     />
     <link rel="stylesheet" href="{% static "css/style.css" %}" />
+    <link type="image/x-icon" href="{% static "png/Logo_MMT.png" %}" rel="shortcut icon">
+    <link type="Image/x-icon" href="{% static "png/Logo_MMT.png" %}" rel="icon">
   </head>
   <body>
     <div>
@@ -93,7 +95,7 @@
                   </span>
                 </div>
                 <div class="-vmainscreen-fileselem">
-                  <form class="-file-form" action='' enctype="multipart/form-data" method="post">
+                  <form action='' enctype="multipart/form-data" method="post">
                     {% csrf_token %}
                     <br>
                     <br>
@@ -146,7 +148,7 @@
                 </span>
               </div>
               <form>
-                <button class="-vmegamen-button", formaction="{% url 'text' %}">
+                <button class="-vmainscreen -button", formaction="{% url 'text' %}">
                   Назад
                 </button>
               </form>

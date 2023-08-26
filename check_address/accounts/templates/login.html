@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
-    <title>Login - exported project</title>
+    <title>ММТ-ГИС. Авторизация</title>
     <meta property="og:title" content="Login - exported project" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
@@ -35,6 +35,8 @@
       data-tag="font"
     />
     <link rel="stylesheet" href="{% static "css/style.css" %}" />
+    <link type="image/x-icon" href="{% static "png/Logo_MMT.png" %}" rel="shortcut icon">
+    <link type="Image/x-icon" href="{% static "png/Logo_MMT.png" %}" rel="icon">
   </head>
   <body>
     <div>
@@ -77,8 +79,16 @@
                   </button>
                 </div>
               </div>
-              <br>
+              <br>  
             </form>
+            <br>
+            <div class="login-container6">
+              <form class="login-form2">
+                <button class="login-button button" formaction="{% url 'text' %}">
+                  Назад
+                </button>
+              </form>
+            </div>
             {% comment %} <form action="" method="post">
                 {% csrf_token %}
                 <table>
