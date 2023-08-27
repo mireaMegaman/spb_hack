@@ -39,11 +39,11 @@ def updata_address(address: str):
     clean_data = clean_text(user_address)
     embedding = encode_one_record(clean_data, model)
     label, place, chance = predict(embedding)
-    return f'{label} {" ".join(place)}', chance
+    return f'{label} {" ".join(place)}\n', chance
 
 
 def read_csv(file: str) -> list:
-    with open(file, encoding='cp1251', errors='ignore', mode='r') as f:
+    with open(file, errors='ignore', mode='r') as f:
         # encoding='cp1251'
         reader = csv.reader(f)
         file_content = [''.join(row) for row in reader]
@@ -115,7 +115,6 @@ class CheckFileView(View):
                     list_address = read_csv(output_request.file.path)
                 case 'xls' | 'lsx':
                     list_address = read_excel(output_request.file.path)
-                    print('xls')
                 case _:
                     raise Http404
             for i in range(len(list_address)):
