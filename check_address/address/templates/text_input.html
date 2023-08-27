@@ -105,17 +105,20 @@
                 </div>
               </form>
               <div class="-vmainscreen-container1">
-                {% comment %} {% for story in story_list %} {% endcomment %}
+                
                 <ul class="-vmainscreen-ul list">
-                  <li class="-vmainscreen-li list-item"><span></span></li>
-                </ul>
-                <ul class="-vmainscreen-ul1 list">
-                  <li class="-vmainscreen-li1 list-item"><span>Text</span></li>
-                </ul>
-                <ul class="-vmainscreen-ul2 list">
-                  <li class="-vmainscreen-li2 list-item"><span>Text</span></li>
-                </ul>
-                {% comment %} {% endfor %} {% endcomment %}
+                  <li class="-vmainscreen-li list-item"><span>
+                    {% if address %}
+                      {{ address }};
+                      <br>
+                      <br>
+                      <p>Шанс успеха:</p>
+                      {{ chance }};   
+                    {% else %}
+                      <br>  
+                    {% endif %}  
+                  </span></li>
+                </ul>     
               </div>
               <div class="-vmainscreen-fileframe">
                 <div class="-vmainscreen-fileselem">

@@ -385,19 +385,19 @@
     background-color: #181818;
   }
   .-vmainscreen-ul {
-    width: 168px;
+    width: auto;
     border-color: #404040;
-    border-width: 1px;
+    border-width: 0px;
     border-top-width: 0px;
-    border-left-width: 2px;
-    border-right-width: 1px;
+    border-left-width: 0px;
+    border-right-width: 0px;
     border-bottom-width: 0px;
   }
   .-vmainscreen-li {
     color: rgba(127, 236, 197, 1);
   }
-  .-vmainscreen-ul1 {
-    width: 168px;
+  /* .-vmainscreen-ul1 {
+    width: auto;
     border-color: #404040;
     border-width: 1px;
     border-top-width: 0px;
@@ -409,7 +409,7 @@
     color: rgba(127, 236, 197, 1);
   }
   .-vmainscreen-ul2 {
-    width: 168px;
+    width: auto;  
     border-color: #404040;
     border-width: 1px;
     border-top-width: 0px;
@@ -419,4 +419,4 @@
   }
   .-vmainscreen-li2 {
     color: rgba(127, 236, 197, 1);
-  }
+  } */

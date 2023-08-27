@@ -9,23 +9,37 @@ from django.utils.decorators import method_decorator
 import os
 import csv
 import openpyxl
-from typing import Tuple
+from sentence_transformers import SentenceTransformer
+from ML.infer import encode_one_record, predict
+from ML.prepare_text import clean_text
+import torch
+import numpy as np
+import os
+import warnings
+warnings.filterwarnings('ignore')
 # Create your views here.
 
-model_path = os.path.join('check_streets', 'ML', 'model.pt')
+model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+#model_path = os.path.join('check_streets', 'ML', 'model.pt')
 
-class OutputData:
-    def __init__(self, object_id, text, prob) -> None:
-        self.object_id = object_id
-        self.text = text
-        self.probability = prob
+def seed_everything(seed):
+    import random
+    random.seed(seed)
+    os.environ['PYTHONHASHSEED'] = str(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    torch.backends.cudnn.deterministic = True
+
+seed_everything(seed=42)
 
 
 def updata_address(address: str):
-    # Здесь должна быть модель
-    list_ans = []
-    
-    return list_ans
+    user_address = str(address) # user input
+    clean_data = clean_text(user_address)
+    embedding = encode_one_record(clean_data, model)
+    label, place, chance = predict(embedding)
+    return f'{label} {" ".join(place)}', chance
 
 
 def read_csv(file: str) -> list:
@@ -57,6 +71,8 @@ class CheckTextView(View):
     def get(self, request):
         form_text = AddressTextForm()
         self.context['form_text'] = form_text
+        self.context['address'] = ''
+        self.context['chance'] = ''
         return render(request, 'text_input.html', context=self.context)
 
     @method_decorator(login_required)
@@ -65,10 +81,11 @@ class CheckTextView(View):
         if form_text.is_valid():
             object = form_text.save(commit=False)
             object.user = request.user
-            list_ans = updata_address(object.text)
-            object.corrected_text = list_ans[0].text
+            ans, chance = updata_address(object.text)
+            object.corrected_text = ans
             object.save()
-            self.context['addresses'] = list_ans
+            self.context['address'] = ans
+            self.context['chance'] = chance
             return render(request, 'text_input.html', self.context)
         else:
             return render(request, 'text_input.html', context=self.context)
@@ -102,7 +119,7 @@ class CheckFileView(View):
                 case _:
                     raise Http404
             for i in range(len(list_address)):
-                list_address[i] = updata_address(list_address[i])
+                list_address[i], chance = updata_address(list_address[i])
             response = HttpResponse(
                 list_address, content_type=f'application/{format_file}')
             response['Content-Disposition'] = f'attachment; filename="answer.{format_file}"'
