@@ -4,6 +4,7 @@ from prepare_text import clean_text
 import torch
 import numpy as np
 import os
+import pandas as pd
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -29,7 +30,7 @@ if __name__ == '__main__':
     embedding = encode_one_record(clean_data, model)
 
     label, place, chance = predict(embedding)
-    print(f'Predicted label is {label}, address is {place}, confidience: {chance}')
+    print(f'Predicted label is {label}\naddress: {" ".join(place)}\nconfidience: {chance}')
 
 
 

@@ -12,7 +12,7 @@ def encode_one_record(
     """
     :param address: str, user's address
     :param model: SentenceTransformer, s-bert model
-    :return:
+    :return: embedding of address
     """
     sentence_embeddings = list(model.encode([address]))
     return sentence_embeddings[0]
@@ -35,19 +35,18 @@ def cosine_similarity(
 def predict(
         embedding
 ):
-    test_embs = pd.read_csv('embeddings_MiniLM.csv')
 
-    idx = test_embs['id']
-    test_embs.drop(columns=['is_actual', 'id'], inplace=True)
-    np_test_embs = test_embs.to_numpy(dtype=np.float32)
+    ts = pd.read_csv('building.csv')
+    idx = ts['id']
+    with open('embeddings.npy', 'rb') as f:
+        np_test_embs = np.load(f)
 
     max_sim = -1
     label = -1
-    for i in range(len(test_embs)):
+    for i in range(len(np_test_embs)):
         sim = cosine_similarity(embedding, np_test_embs[i, :])
         if sim > max_sim:
             max_sim = sim
             label = idx[i]
-    ts = pd.read_csv('building.csv')
-    predicted_address = ts[ts['id'] == label]['full_address']
-    return (label, predicted_address, max_sim)
+    predicted_address = list(ts[ts['id'] == label]['full_address'])
+    return label, predicted_address, max_sim
